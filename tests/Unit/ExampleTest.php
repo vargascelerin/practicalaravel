@@ -11,7 +11,7 @@ class ExampleTest extends TestCase
      */
     public function test_that_true_is_true(): void
     {
-        $this->assertTrue(false);
+        $this->assertTrue(true);
     }
 
     public function test_status_code_is_200(): void
