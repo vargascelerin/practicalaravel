@@ -3,6 +3,7 @@
 namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use App\Http\Controllers\OperationsController;
 
 class ExampleTest extends TestCase
 {
@@ -18,5 +19,12 @@ class ExampleTest extends TestCase
     {
         $statusCode = 200;
         $this->assertEquals(200, $statusCode);
+    }
+
+    public function testaddresult(): void{
+        $controller = new OperationsController;
+        $result = $controller->addition(5,10);
+        $this->assertIsInt($result);
+        $this->assertEquals(15,$result);
     }
 }
